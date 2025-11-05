@@ -1,0 +1,38 @@
+#Day1
+2667. Create Hello World Function
+Write a function createHelloWorld. It should return a new function that always returns "Hello World"
+
+/**
+ * @return {Function}
+ */
+
+
+const createHelloWorld = () => () => "Hello World"; // A function that returns a function that returns ‘Hello World’.”
+
+/**
+ * const f = createHelloWorld();
+ * f(); // "Hello World"
+ */
+
+/**
+
+Here are the short learnings from LeetCode 2667 (Create Hello World Function):
+
+🧠 Functions can return other functions — core concept of higher-order functions.
+
+💬 Closures — the inner function “remembers” the outer scope (even though not used here).
+
+⚡ Arrow functions give concise syntax → () => () => "Hello World".
+
+🚫 Unused parameters (...args) are fine — they show you can accept inputs without using them.
+
+🔒 Use const for functions that don’t change.
+
+🧩 Pure function — always returns the same output with no side effects.
+
+🪶 Minimal syntax possible — good exercise in writing clean, readable one-liners.
+
+Time Complexity O(1),
+Space Complexity  Space Complexity
+O(1) 
+*/
