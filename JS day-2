@@ -8,21 +8,19 @@ Given an integer n, return a counter function. This counter function initially r
  */
 
 
-const createCounter = n => () => n++;  // 
+const createCounter = n => () => n++;   // code 
 
 
 
-/**
- JS builds an inner function that still “remembers” n.
+                                                                              /** explanation
+                                                                                  JS builds an inner function that still “remembers” n.
 
-Every call to that inner function:
+                                                                                     Every call to that inner function:
 
-Returns the current value of n
+                                                                                     Returns the current value of n
 
-Increments it afterward
- */
-
-
+                                                                                       Increments it afterward
+                                                                                *
 /** example
  * const counter = createCounter(10)
  * counter() // 10
@@ -31,6 +29,7 @@ Increments it afterward
  */
 
 /**
+Outcomes
 This question tests your grasp of →
 
 Closures, scope, encapsulation, and function factories — all crucial for callbacks, async handling, and modular JS design.
