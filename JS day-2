@@ -1,0 +1,44 @@
+
+2620. Counter
+Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc
+
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+
+
+const createCounter = n => () => n++;  // 
+
+
+
+/**
+ JS builds an inner function that still “remembers” n.
+
+Every call to that inner function:
+
+Returns the current value of n
+
+Increments it afterward
+ */
+
+
+/** example
+ * const counter = createCounter(10)
+ * counter() // 10
+ * counter() // 11
+ * counter() // 12
+ */
+
+/**
+This question tests your grasp of →
+
+Closures, scope, encapsulation, and function factories — all crucial for callbacks, async handling, and modular JS design.
+
+Time: O(1) per call
+
+Space: O(1) total
+*/
+
+
+
