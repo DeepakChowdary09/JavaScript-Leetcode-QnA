@@ -1,6 +1,6 @@
 /**
  * LeetCode 2665: Counter II
- *
+ *Write a function createCounter. It should accept an initial integer init. It should return an object with three functions.
  * Explanation:
  * Build a counter with three methods that share the same captured state.
  * - increment(): ++curr
