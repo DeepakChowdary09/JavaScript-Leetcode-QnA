@@ -15,6 +15,9 @@ Write a function expect that helps developers test their code. It should take in
  * Time Complexity: O(1) — only one comparison per call
  * Space Complexity: O(1) — constant space for `val` in closure
  */
+
+
+
 var expect = function(val) {
   return {
     toBe: function(expected) {
@@ -27,6 +30,8 @@ var expect = function(val) {
     }
   };
 };
+
+
 
 /**
  * Example usage:
