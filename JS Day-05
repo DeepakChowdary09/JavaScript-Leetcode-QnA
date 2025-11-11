@@ -1,0 +1,32 @@
+
+
+/**
+2635. Apply Transform Over Each Element in Array
+
+Given an integer array arr and a mapping function fn, return a new array with a transformation applied to each element.
+The returned array should be created such that returnedArray[i] = fn(arr[i], i).
+Please solve it without the built-in Array.map method.
+
+ * @param {number[]} arr
+ * @param {Function} fn
+ * @return {number[]}
+ *
+ * Explanation:
+ * We manually apply fn() to each element and push into a new array.
+ * Concepts used:
+ * - for loop iteration
+ * - higher-order function (fn passed as a callback)
+ * - array construction without built-in map
+ *
+ * Time Complexity: O(n) — loop runs once per element
+ * Space Complexity: O(n) — new array of same size is created
+ */
+var map = function(arr, fn) {
+    const result = [];        // new array to store transformed values
+    for (let i = 0; i < arr.length; i++) {
+        result.push(fn(arr[i], i));  // apply fn(value, index)
+    }
+    return result;
+};
+
+
