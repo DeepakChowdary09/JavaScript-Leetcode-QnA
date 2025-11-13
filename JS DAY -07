@@ -1,0 +1,38 @@
+/**
+2626 Array Reduce Transformation. 
+
+Given an integer array nums, a reducer function fn, and an initial value init, return the final result obtained by executing the fn function on each element of the array, sequentially, passing in the return value from the calculation on the preceding element.
+This result is achieved through the following operations: val = fn(init, nums[0]), val = fn(val, nums[1]), val = fn(val, nums[2]), ... until every element in the array has been processed. The ultimate value of val is then returned.
+If the length of the array is 0, the function should return init.
+Please solve it without using the built-in Array.reduce method.
+
+
+ * LeetCode 2626 -  
+ * Optimized, correct implementation + tests + README-style git instructions
+ *
+ * Explanation (short):
+ * - This implements a manual `reduce`-like function.
+ * - We keep an accumulator (`acc`) initialized with `init`.
+ * - For every element in `nums`, we update `acc = fn(acc, nums[i], i)`.
+ * - Return `acc` after the loop.
+ *
+ * Time Complexity: O(n) — single pass through the array
+ * Space Complexity: O(1) — constant extra space for the accumulator
+ */
+
+var reduce = function(nums, fn, init) {
+  // If nums is empty, just return the initial value per problem definition.
+  if (!Array.isArray(nums) || nums.length === 0) return init;
+
+  // Use `acc` to hold the running accumulator (do not mutate `init` unless you want to).
+  let acc = init;
+
+  for (let i = 0; i < nums.length; i++) {
+    // Call fn with (accumulator, currentValue, index)
+    // This preserves the same calling convention as Array.prototype.reduce-like problems.
+    acc = fn(acc, nums[i], i);
+  }
+
+  return acc;
+};
+
